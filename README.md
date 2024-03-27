@@ -7,6 +7,8 @@ As a developer this gave me an opportunity to read up on the documentation for t
 
 ## Usage
 
+The app is currently deployed and live [on Github Pages!](https://distractabee.github.io/wk-05-work-day-planner/)
+
 ![alt text](assets/images/screenshot.png)
 ![alt text](assets/images/screenshot.png)
 
