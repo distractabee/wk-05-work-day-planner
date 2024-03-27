@@ -1,9 +1,3 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
-
-
 $(function () {
 
   // add the current day and time to the top of the page under the header
@@ -41,8 +35,16 @@ $(function () {
     localStorage.setItem(blockID, calendarEventDesc);
   });
 
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
+  // gets any user input that was saved in localStorage and sets
+  // the values of the corresponding text area elements.
+
+  $(this).each(function () {
+    const blockID = $(this).attr("id");
+    const rememberThis = localStorage.getItem(blockID);
+
+    if (rememberThis) {
+      $(this).children("description").val(rememberThis);
+    }
+  });
 
 });
