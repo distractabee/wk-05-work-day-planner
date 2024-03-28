@@ -38,12 +38,13 @@ $(function () {
   // gets any user input that was saved in localStorage and sets
   // the values of the corresponding text area elements.
 
-  $(this).each(function () {
+  $(".time-block").each(function () {
     const blockID = $(this).attr("id");
+    console.log(blockID);
     const rememberThis = localStorage.getItem(blockID);
 
     if (rememberThis) {
-      $(this).children("description").val(rememberThis);
+      $(this).children(".description").val(rememberThis);
     }
   });
 
